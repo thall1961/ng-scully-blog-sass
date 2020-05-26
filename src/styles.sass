@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+// @import './variables'
+
+$blue: #4abdac !default
+$yellow: #f7b733 !default
+
+$colors: ("blue": $blue) !default
+
+$primary : $blue !default
+$warning: $yellow !default
+
+$theme-colors: ("primary": $primary, "warning": $warning) !default
+
+$border-radius: 0.2rem !default
+$border-radius-sm: 0.1rem !default
+$border-radius-lg: 0.3rem !default
+
+body
+    background-color: #fcfbfa
+
+@font-face
+    font-family: lato
+    src: url(assets/fonts/Jost-VariableFont_wght.ttf) format("truetype")
+
+$font-family-sans-serif: lato !default
+$font-family-base: lato !default
+
+.justify-content-flex-end
+    justify-content: flex-end
+
+.no-underline
+    text-decoration: none !important
+
+@import '~bootstrap/scss/bootstrap'
