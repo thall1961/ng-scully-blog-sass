@@ -7,7 +7,7 @@ import { FooterComponent } from "../shared/footer/footer.component";
 import { NavComponent } from "../shared/nav/nav.component";
 
 @NgModule({
-    declarations: [HomeComponent, NavComponent, FooterComponent],
+    declarations: [HomeComponent],
     imports: [CommonModule, HomeRoutingModule],
 })
 export class HomeModule {}

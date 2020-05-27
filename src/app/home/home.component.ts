@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ScullyRoutesService } from "@scullyio/ng-lib";
+import { Observable } from "rxjs";
 
 @Component({
     selector: "app-home",
@@ -6,7 +8,11 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ["./home.component.sass"],
 })
 export class HomeComponent implements OnInit {
-    constructor() {}
+    links$: Observable<any> = this.scully.available$;
 
-    ngOnInit(): void {}
+    constructor(private scully: ScullyRoutesService) {}
+
+    ngOnInit(): void {
+        this.links$.subscribe();
+    }
 }
