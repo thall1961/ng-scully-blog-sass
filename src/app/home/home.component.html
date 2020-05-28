@@ -25,6 +25,8 @@
 
 <div class="container py-md-4 py-lg-5">
     <ul *ngFor="let page of links$ | async">
-        <li>{{ page.route }}</li>
+        <li>
+            <a [routerLink]="page.route">{{ page.route }}</a>
+        </li>
     </ul>
 </div>
